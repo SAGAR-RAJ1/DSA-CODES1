@@ -33,6 +33,9 @@ int main(){
     return 0;
 }
 
+//Better modified code of same binary search
+
+
 // #include <iostream>
 
 // bool binary(int arr[], int start, int end, int x) {
