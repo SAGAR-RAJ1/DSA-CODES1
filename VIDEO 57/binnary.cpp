@@ -32,7 +32,7 @@ bool search(int arr[],int start,int end, int x){
 
 int main(){
     
-    int arr[6]={1,3,5,66,9,2};
+    int arr[6]={1,3,5,66,92,225};
     cout<<search(arr,0,5,69);
 
 
