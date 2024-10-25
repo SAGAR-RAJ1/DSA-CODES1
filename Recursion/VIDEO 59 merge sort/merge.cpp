@@ -27,7 +27,7 @@ void merge(int arr[], int start, int mid, int end)
         }
     }
 
-    // left overs
+    // left overs that is the left and right arrays are not empty yet
 
     // if left one left
 
