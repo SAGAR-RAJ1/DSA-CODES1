@@ -47,6 +47,10 @@ int main()
     a2.display();
     a3.display();
     a4.display();
+    //without using copy custructor we can also use assignment operator
+    customer a5;
+    a5=a1;
+    a1.display();
     return 0;
 }
 
