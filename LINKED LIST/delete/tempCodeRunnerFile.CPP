@@ -1,0 +1,3 @@
+
+deleteatend(head);
+transverse(head);
