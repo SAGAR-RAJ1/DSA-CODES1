@@ -18,6 +18,22 @@ public:
         prev = NULL;
     }
 };
+
+void insert(node *head, int value, int position)
+{
+
+    node *ptr = head;
+    node *p = new node(value);
+    while (--position)
+    {
+        ptr = ptr->next;
+    }
+
+    p->prev = ptr;
+    p->next = ptr->next;
+    ptr->next->prev = p;
+    ptr->next = p;
+}
 void display(node *head)
 {
     node *trans = head;
@@ -26,8 +42,8 @@ void display(node *head)
         cout << trans->data << "  ";
         trans = trans->next;
     }
+    cout << endl;
 }
-
 int main()
 {
     int arr[5] = {1, 2, 3, 4, 5};
@@ -53,6 +69,10 @@ int main()
         }
     }
     display(head);
+    insert(head, 32, 2);
+    display(head);
+
+    // code to add at any point
 
     return 0;
 }
