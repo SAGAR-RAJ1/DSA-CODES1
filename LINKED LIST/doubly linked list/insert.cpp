@@ -69,7 +69,7 @@ int main()
         }
     }
     display(head);
-    insert(head, 32, 2);
+    insert(head, 32,2);
     display(head);
 
     // code to add at any point
