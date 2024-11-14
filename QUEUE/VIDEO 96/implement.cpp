@@ -31,14 +31,15 @@ public:
     // push element in to queue
     void push(int data)
     {
-        if (front == rear)
+        if (isEmpty())
         {
             front = rear = 0;
             arr[0] = data;
         }
-        else if (rear == size - 1)
+        else if (isFull())
         {
             cout << "queue is full cant push" << endl;
+            
         }
         else
         {
@@ -85,6 +86,11 @@ int main()
 {
 
    queue a(5);
+   a.push(1);
+   a.push(1);
+   a.push(1);
+   a.push(1);
+   a.push(1);
    a.push(1);
    cout<<a.isEmpty();
    a.pop();
