@@ -31,7 +31,7 @@ int main()
     {
         node *temp = q.front();
         q.pop();
-        cout << "enter left side value of "<<temp->data << endl;
+        cout << "enter left side value of "<<temp->data << " : ";
         cin >> left;
 
         //[phle left create kro]
@@ -40,7 +40,7 @@ int main()
             temp->left = new node(left);
             q.push(temp->left);
         }
-        cout << "enter right side value of "<<temp->data << endl;
+        cout << "enter right side value of "<<temp->data << " : ";
         cin >> right;
         if (right != -1)
         {
