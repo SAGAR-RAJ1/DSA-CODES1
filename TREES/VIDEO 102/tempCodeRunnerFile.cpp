@@ -1,0 +1,1 @@
+ temp->right = new node
