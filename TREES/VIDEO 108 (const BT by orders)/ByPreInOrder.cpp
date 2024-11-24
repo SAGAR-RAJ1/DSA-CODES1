@@ -45,17 +45,33 @@ root->right=tree(in,pre,position+1,Inend,index+(position-Instart)+1);
 return root;
 
 }
+void transverse(node *root)
+{
+    if (root == NULL)
+    {
+        return;
+    }
+
+    
+    // left
+    transverse(root->left);
+   
+    //root
+    cout << "  " << root->data;
+     // right
+    transverse(root->right);
+}
 
 
 int main(){
     
 
-int pre[]={1,2,5,5,8,9,3,6,7,10};
+int pre[]={1,2,4,5,8,9,3,6,7,10};
 int in[]={4,2,8,5,9,1,6,3,7,10};
 
+node * root= tree(in,pre,0,9,0);
 
-
-
+transverse(root);
 
 
 
