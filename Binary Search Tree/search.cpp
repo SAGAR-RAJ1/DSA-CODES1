@@ -64,10 +64,10 @@ int search(node * root,int target){
    
     if (root->data>target)
     {
-        search(root->left,target);
+       return search(root->left,target);
     }
     else{
-        search(root->right,target);
+       return  search(root->right,target);
     }
     
     
@@ -85,7 +85,7 @@ for (int i = 0; i < 10; i++)
 
 inorder(root);
 cout<<endl;
-cout<<search(root,1);
+cout<<search(root,15);
 
     return 0;
 }

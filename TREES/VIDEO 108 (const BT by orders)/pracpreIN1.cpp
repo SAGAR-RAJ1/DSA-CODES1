@@ -16,33 +16,30 @@ class node {
     }
 };
 
-int find(int * in, int target,int start,int end){
-for (int i=start; i <=end; i++)
-{
- if (in[i]==target)
- {
-    return i;
- }
- 
-}
-return -1;
+int find(int * in , int target , int instart , int inend){
 
-};
-
-
-node* tree(int * in,int * pre,int Instart,int Inend, int index) {
-
-    if (Instart>Inend)
+    for (int i = instart; i <= inend; i++)
     {
-        return NULL;
+        if (in[i]==target)
+        {
+            return i;
+        }
+        
     }
-    
-node * root=new node(pre[index]);
-int position = find(in,pre[index],Instart,Inend);
-root->left=tree(in,pre,Instart,position-1,index+1);
-root->right=tree(in,pre,position+1,Inend,index+(position-Instart)+1);
+    return -1;
+}
+node * tree(int * in , int * pre , int instart , int inend , int index ){
 
-return root;
+if (instart>inend)
+{
+    return NULL;
+
+}
+node * root = new node(pre[index]);
+int position = find(in,pre[index],instart,inend);
+root->left=tree(in,pre,instart,position-1,index+1);
+root->right=tree(in,pre,position+1,inend,index+(position-instart)+1);
+
 
 }
 void transverse(node *root)
@@ -64,20 +61,9 @@ void transverse(node *root)
 
 
 int main(){
-    
-
-int pre[]={1,2,4,5,8,9,3,6,7,10};
+    int pre[]={1,2,4,5,8,9,3,6,7,10};
 int in[]={4,2,8,5,9,1,6,3,7,10};
-
 node * root= tree(in,pre,0,9,0);
-
 transverse(root);
-
-
-
-
-
-
-
     return 0;
 }
