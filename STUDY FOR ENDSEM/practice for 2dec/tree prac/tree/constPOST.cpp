@@ -18,7 +18,7 @@ public:
 };
 int find(int *in, int start, int end, int target)
 {
-    for (int i = 0; i <= end; i++)
+    for (int i = start; i <= end; i++)
     {
         if (in[i] == target)
         {
@@ -39,7 +39,7 @@ node *tree(int *in, int *post, int instart, int inend, int index)
 
     int position = find(in, instart, inend, post[index]);
     root->right = tree(in, post, position + 1, inend, index - 1);
-    root->left = tree(in, post, instart, position - 1, index - (inend - position) - 1);
+    root->left = tree(in, post, instart, position - 1, index-(inend - position) - 1);
 
     return root;
 }
@@ -49,7 +49,6 @@ void traverse(node * root){
     {
         return;
     }
-   
     traverse(root->left); cout<<root->data<<"  ";
     traverse(root->right);
 }
