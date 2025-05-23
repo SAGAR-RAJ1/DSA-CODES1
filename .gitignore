@@ -1,1 +1,55 @@
+# Compiled object files
+*.o
+
+# Precompiled Headers
+*.gch
+
+# Executable files
+a.out
+*.out
+*.exe
+
+# macOS specific files
 .DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# macOS Folder Settings
+.Spotlight-V100
+.Trashes
+
+# Files created by macOS
+*.swp
+*~
+
+# Xcode
+*.xcworkspace
+*.xcodeproj
+*.xcuserstate
+*.xcuserdata
+build/
+
+# Clang crash reports
+*.moved-aside
+*.crash
+
+# Backup files
+*.bak
+*.tmp
+*.temp
+
+# CMake build directory
+/build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Logs
+*.log
